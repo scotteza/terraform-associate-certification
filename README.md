@@ -8,7 +8,7 @@ I've been doing Terraform for quite a while now, so I think it's a good idea to 
 
 I'm working my way through the sections in the [study guide](https://learn.hashicorp.com/tutorials/terraform/associate-study).
 
-- [ ] Learn about IaC
+- [x] Learn about IaC
 - [ ] Manage infrastructure
 - [ ] Master the workflow
 - [ ] Learn more subcommands
