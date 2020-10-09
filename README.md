@@ -4,6 +4,10 @@ A notepad and code playground for my working towards the [Terraform Associate Ce
 
 I've been doing Terraform for quite a while now, so I think it's a good idea to study towards a certification.
 
+This is my study guide for myself, and is not intended as a deep reference document.
+
+Note that many of the examples in this code are not my own: they were copy-pasted from the [HashiCorp Learn](https://learn.hashicorp.com/) website.
+
 ---
 
 ## Section Checklist
@@ -38,6 +42,7 @@ I'm working my way through the sections in the [study guide](https://learn.hashi
 - `terraform apply` executes the plan.
 - `terraform destroy` nukes your infra.
 - `terraform show` shows the current state.
+- `terraform output` shows output variables.
 
 ### The Terraform Core
 
