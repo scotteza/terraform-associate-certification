@@ -69,6 +69,39 @@ I'm working my way through the sections in the [study guide](https://learn.hashi
   - `_.auto.tfvars` and `_.auto.tfvars.json` files, processed in lexical order of their filenames.
   - Any -var and -var-file options on the command line, in the order they are provided. (This includes variables set by a Terraform Cloud workspace).
 
+#### Remote Backends
+
+- These store state remotely.
+  - My common use-case here: S3 + DynamoDB.
+- HashiCorp recommends using [Terraform Cloud](https://www.hashicorp.com/products/terraform).
+
+#### Terraform Cloud Blurb
+
+- Terraform Cloud also offers HashiCorp's commercial solutions and with a free version which acts as a remote backend.
+- Terraform Cloud allows teams to easily version, audit, and collaborate on infrastructure changes.
+- Each proposed change generates a Terraform plan which can be reviewed and collaborated on as a team.
+- When a proposed change is accepted, the Terraform logs are stored, resulting in a linear history of infrastructure states to help with auditing and policy enforcement.
+- Additional benefits to running Terraform remotely include moving access credentials off of developer machines and freeing local machines from long-running Terraform processes.
+
+#### Terraform Cloud - General
+
+TODO: the [Terraform Cloud tutorial](https://learn.hashicorp.com/collections/terraform/cloud-get-started). Take note of the following workflow options when following this tutorial:
+
+- A VCS-driven workflow, in which it automatically queues plans whenever changes are committed to your configuration's VCS repo.
+- An API-driven workflow, in which a CI pipeline or other automated tool can upload configurations directly.
+
+You need to generate a user token to use Terraform Cloud, which is stored in `~/.terraformrc`.
+
+Example below:
+
+```
+credentials "app.terraform.io" {
+  token = "REPLACE_ME"
+}
+```
+
+Remember to run `terraform init` when setting up your remote backend.
+
 ---
 
 ### Master the workflow
