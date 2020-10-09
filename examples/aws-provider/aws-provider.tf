@@ -11,6 +11,7 @@ terraform {
 }
 
 provider "aws" {
+  # This attribute refers Terraform to the AWS credentials stored in your AWS Config File, which you created when you configured the AWS CLI.
   profile = "default"
   region  = "us-west-2"
   alias   = "env"
